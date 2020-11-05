@@ -1,0 +1,11 @@
+name: Test
+
+on:
+  status
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run a one-line script
+        run: echo "${{ github.event.state }} - ${{ github.event.description }}"
